@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_scientific"
+            android:icon="@android:drawable/btn_plus"
+            android:title="Scientific calculator" />
+        <item
+            android:id="@+id/nav_simple"
+            android:icon="@android:drawable/btn_minus"
+            android:title="Simple calculator" />
+    </group>
+
+
+    <item android:title="Conversation">
+         <menu>
+             <item
+                 android:id="@+id/nav_length"
+                 android:icon="@android:drawable/ic_menu_myplaces"
+                 android:title="Length" />
+             <item
+                 android:id="@+id/nav_square"
+                 android:icon="@android:drawable/editbox_dropdown_light_frame"
+                 android:title="Square" />
+             <item
+                 android:id="@+id/nav_volume"
+                 android:icon="@android:drawable/checkbox_off_background"
+                 android:title="Volume" />
+             <item
+                 android:id="@+id/nav_temp"
+                 android:icon="@android:drawable/ic_menu_sort_by_size"
+                 android:title="Temperature" />
+             <item
+                 android:id="@+id/nav_speed"
+                 android:icon="@drawable/ic_menu_send"
+                 android:title="Speed" />
+             <item
+                 android:id="@+id/nav_time"
+                 android:icon="@android:drawable/ic_menu_recent_history"
+                 android:title="Time" />
+             <item
+                 android:id="@+id/nav_mass"
+                 android:icon="@android:drawable/ic_partial_secure"
+                 android:title="Mass" />
+
+
+         </menu>
+    </item>
+</menu>

@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/RelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonAC"
+                style="@style/DeleteButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/ac"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonSIN"
+                app:layout_constraintEnd_toStartOf="@+id/buttonUNDO"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonUNDO"
+                style="@style/DeleteButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/undo"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/button7"
+                app:layout_constraintEnd_toStartOf="@+id/buttonOPENBR"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/buttonAC"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/buttonOPENBR"
+                style="@style/ActionButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/openbracket"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/button8"
+                app:layout_constraintEnd_toStartOf="@+id/buttonCLOSEBR"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/buttonUNDO"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonCLOSEBR"
+                style="@style/ActionButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/closebracket"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/button9"
+                app:layout_constraintEnd_toStartOf="@+id/buttonMOD"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/buttonOPENBR"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonMOD"
+                style="@style/ButtonWithTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/modshow"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonADD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/buttonCLOSEBR"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonADD"
+                style="@style/ActionButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/add"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonMINUS"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button9"
+                app:layout_constraintTop_toBottomOf="@+id/buttonMOD" />
+
+            <Button
+                android:id="@+id/button7"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/_7"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/button4"
+                app:layout_constraintEnd_toStartOf="@+id/button8"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/buttonSIN"
+                app:layout_constraintTop_toBottomOf="@+id/buttonUNDO" />
+
+            <Button
+                android:id="@+id/button8"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/_8"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/button5"
+                app:layout_constraintEnd_toStartOf="@+id/button9"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button7"
+                app:layout_constraintTop_toBottomOf="@+id/buttonOPENBR" />
+
+            <Button
+                android:id="@+id/button9"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/_9"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/button6"
+                app:layout_constraintEnd_toStartOf="@+id/buttonADD"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button8"
+                app:layout_constraintTop_toBottomOf="@+id/buttonCLOSEBR" />
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/_1"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonLOG"
+                app:layout_constraintEnd_toStartOf="@+id/button2"
+                app:layout_constraintStart_toEndOf="@+id/buttonTAN"
+                app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/_3"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonPoint"
+                app:layout_constraintEnd_toStartOf="@+id/buttonMULT"
+                app:layout_constraintStart_toEndOf="@+id/button2"
+                app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/_2"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonPOW"
+                app:layout_constraintEnd_toStartOf="@+id/button3"
+                app:layout_constraintStart_toEndOf="@+id/button1"
+                app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+            <Button
+                android:id="@+id/buttonMULT"
+                style="@style/ActionButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/multshow"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonPoint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button3"
+                app:layout_constraintTop_toBottomOf="@+id/buttonMINUS" />
+
+            <Button
+                android:id="@+id/buttonTAN"
+                style="@style/ButtonWithTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/tan"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonLOG"
+                app:layout_constraintEnd_toStartOf="@+id/button1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonCOS" />
+
+            <Button
+                android:id="@+id/buttonPOW"
+                style="@style/ActionButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/pow"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonSQR"
+                app:layout_constraintEnd_toStartOf="@+id/button0"
+                app:layout_constraintStart_toEndOf="@+id/buttonLOG"
+                app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+            <Button
+                android:id="@+id/button0"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/_0"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonPI"
+                app:layout_constraintEnd_toStartOf="@+id/buttonPoint"
+                app:layout_constraintStart_toEndOf="@+id/buttonPOW"
+                app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+            <Button
+                android:id="@+id/buttonPoint"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/point"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonE"
+                app:layout_constraintEnd_toStartOf="@+id/buttonDEV"
+                app:layout_constraintStart_toEndOf="@+id/button0"
+                app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+            <Button
+                android:id="@+id/buttonLOG"
+                style="@style/ButtonWithTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/log"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonSQRT"
+                app:layout_constraintEnd_toStartOf="@+id/buttonPOW"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonTAN" />
+
+            <Button
+                android:id="@+id/buttonDEV"
+                style="@style/ActionButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/dev"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonCALC"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/buttonPoint"
+                app:layout_constraintTop_toBottomOf="@+id/buttonMULT" />
+
+            <Button
+                android:id="@+id/buttonSQR"
+                style="@style/ButtonWithTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/sqrshow"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonPI"
+                app:layout_constraintStart_toEndOf="@+id/buttonSQRT"
+                app:layout_constraintTop_toBottomOf="@+id/buttonPOW" />
+
+            <Button
+                android:id="@+id/buttonSQRT"
+                style="@style/ButtonWithTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/sqrtshow"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonSQR"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonLOG" />
+
+            <Button
+                android:id="@+id/buttonPI"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/pishow"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonE"
+                app:layout_constraintStart_toEndOf="@+id/buttonSQR"
+                app:layout_constraintTop_toBottomOf="@+id/button0" />
+
+            <Button
+                android:id="@+id/buttonE"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/eshow"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonCALC"
+                app:layout_constraintStart_toEndOf="@+id/buttonPI"
+                app:layout_constraintTop_toBottomOf="@+id/buttonPoint" />
+
+            <Button
+                android:id="@+id/buttonCALC"
+                style="@style/CalcButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/calc"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/buttonE"
+                app:layout_constraintTop_toBottomOf="@+id/buttonDEV" />
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/_5"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/button3"
+                app:layout_constraintEnd_toStartOf="@+id/button6"
+                app:layout_constraintStart_toEndOf="@+id/button4"
+                app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+            <Button
+                android:id="@+id/button6"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="6dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/_6"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/button3"
+                app:layout_constraintEnd_toStartOf="@+id/buttonMINUS"
+                app:layout_constraintStart_toEndOf="@+id/button5"
+                app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+            <Button
+                android:id="@+id/buttonCOS"
+                style="@style/ButtonWithTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/cos"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonTAN"
+                app:layout_constraintEnd_toStartOf="@+id/button4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonSIN" />
+
+            <Button
+                android:id="@+id/buttonSIN"
+                style="@style/ButtonWithTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/sin"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonCOS"
+                app:layout_constraintEnd_toStartOf="@+id/button7"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonAC" />
+
+            <Button
+                android:id="@+id/buttonMINUS"
+                style="@style/ActionButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/mns"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/buttonMULT"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button6"
+                app:layout_constraintTop_toBottomOf="@+id/buttonADD" />
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/NumberButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/_4"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/button1"
+                app:layout_constraintEnd_toStartOf="@+id/button5"
+                app:layout_constraintStart_toEndOf="@+id/buttonCOS"
+                app:layout_constraintTop_toBottomOf="@+id/button7" />
+        </android.support.constraint.ConstraintLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

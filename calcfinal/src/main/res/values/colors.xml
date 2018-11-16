@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#718093</color>
+    <color name="colorPrimaryDark">#2f3640</color>
+    <color name="colorAccent">#2f3640</color>
+
+
+    <!--<color name="mybackgroundcolor">#deffec43</color>-->
+    <color name="mybackgroundcolor">#ded2ede5</color>
+    <color name="ACUNbuttoncolor">#E0EC5534</color>
+    <color name="myGreenColor">#2ECC71</color>
+    <color name="numberTextColor">#c23616</color>
+    <color name="CALCuttoncolor">#D21378D1</color>
+
+    <color name="mytextcolor">#e5891b02</color>
+    <color name="goodGreenColor">#2ECC71</color>
+    <color name="convert_what">#C85099ED</color>
+    <color name="convert_to">#C8EA7566</color>
+
+
+</resources>
