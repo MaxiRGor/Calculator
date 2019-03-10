@@ -1,11 +1,9 @@
 package harelchuk.maxim.calcfinal;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -14,9 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 //import javax.measure.*;
 //comment
@@ -32,6 +27,8 @@ public class MainActivityCalculation extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_calculation);
 
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -46,6 +43,8 @@ public class MainActivityCalculation extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //navigationView.per
 
     }
 
@@ -63,7 +62,7 @@ public class MainActivityCalculation extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main_activity_calculation, menu);
-        return true;
+        return false;
     }
 
     @Override
@@ -99,25 +98,25 @@ public class MainActivityCalculation extends AppCompatActivity
             fragmentClass = FragmentSimple.class;
 
         } else if (id == R.id.nav_length) {
-            fragmentClass = FragmentNotFinished.class;
+            fragmentClass = FragmentConversation.class;
 
         } else if (id == R.id.nav_square) {
-            fragmentClass = FragmentNotFinished.class;
+            fragmentClass = FragmentConversation.class;
 
         } else if (id == R.id.nav_volume) {
-            fragmentClass = FragmentNotFinished.class;
+            fragmentClass = FragmentConversation.class;
 
         } else if (id == R.id.nav_temp) {
-            fragmentClass = FragmentNotFinished.class;
+            fragmentClass = FragmentConversation.class;
 
         } else if (id == R.id.nav_speed) {
-            fragmentClass = FragmentNotFinished.class;
+            fragmentClass = FragmentConversation.class;
 
         } else if (id == R.id.nav_time) {
-            fragmentClass = FragmentNotFinished.class;
+            fragmentClass = FragmentConversation.class;
 
         } else if (id == R.id.nav_mass) {
-            fragmentClass = FragmentNotFinished.class;
+            fragmentClass = FragmentConversation.class;
 
         }
 

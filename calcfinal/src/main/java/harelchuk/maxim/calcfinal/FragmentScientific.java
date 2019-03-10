@@ -5,12 +5,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
+import net.objecthunter.exp4j.function.Function;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,13 +42,13 @@ public class FragmentScientific extends Fragment {
 
         List<Button> buttonList = getListOfButtons(scienceButtonsView);
         View.OnClickListener shortClickListener = setOnShortClickListener();
-        View.OnLongClickListener longClickListener = setOnLongClickListener();
+        View.OnLongClickListener longClickListener = createOnLongClickListener();
         setBtnListeners(buttonList, shortClickListener,longClickListener);
 
         return scienceButtonsView;
     }
 
-    private View.OnLongClickListener setOnLongClickListener() {
+    private View.OnLongClickListener createOnLongClickListener() {
         return new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -127,16 +130,9 @@ public class FragmentScientific extends Fragment {
                     case R.id.buttonDEV: addSign("/"); break;
                     case R.id.buttonCALC: solve(); break;
 
-                    case R.id.buttonE:
-                        if(!pointPressedBool) addLetter(String.valueOf(Math.E));
-                        pointPressedBool = true;
-                        break;
+                    case R.id.buttonE: addLetter("e"); break;
 
-                    case R.id.buttonPI:
-                        if(!pointPressedBool) addLetter(String.valueOf(Math.PI));
-                        pointPressedBool = true;
-                        break;
-
+                    case R.id.buttonPI: addLetter("pi"); break;
 
                     case R.id.buttonSIN:
                         addSinCosTanLog("sin(");
@@ -316,23 +312,36 @@ public class FragmentScientific extends Fragment {
 
         try {
             double result;
-            Expression e = new ExpressionBuilder(inputString).build();
+
+            Function[] convertToDegrees = {
+                    new Function("sin"){public double apply(double... args){return Math.sin(Math.toRadians(args[0]));}},
+                    new Function("cos"){public double apply(double... args){return Math.cos(Math.toRadians(args[0]));}},
+                    new Function("tan"){public double apply(double... args){return Math.tan(Math.toRadians(args[0]));}},
+            };
+
+            Expression e = new ExpressionBuilder(inputString).functions(convertToDegrees).build();
             result = e.evaluate();
             historyString+="\n";
             historyString+=inputString;
             historyTextView.setText(historyString + "=");
 
-            if ((result % 1) == 0) {
-                int temp = (int) result;
-                inputString = String.valueOf(temp);
-                historyString+=" = " + inputString;
-            } else {
-                result = Math.round(result * 100000000.0) / 100000000.0;
-                inputString = String.valueOf(result);
-                historyString+=" = " + inputString;
-                pointPressedBool=true;
+            if(result>2147483647){
+                Toast.makeText(getContext(), "Too large answer", Toast.LENGTH_LONG).show();
             }
-            inputTextView.setText(inputString);
+            else{
+                if ((result % 1) == 0) {
+                    int temp = (int) result;
+                    inputString = String.valueOf(temp);
+                    historyString+=" = " + inputString;
+                } else {
+                    result = Math.round(result * 100000000.0) / 100000000.0;
+                    inputString = String.valueOf(result);
+                    historyString+=" = " + inputString;
+                    pointPressedBool=true;
+                }
+                inputTextView.setText(inputString);
+            }
+
         }
         catch (Exception e){
             Toast.makeText(getContext(), "Solve error", Toast.LENGTH_LONG).show();

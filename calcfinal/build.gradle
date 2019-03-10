@@ -1,5 +1,22 @@
 apply plugin: 'com.android.application'
 
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.1' //change this with latest gradle version.
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
 android {
     compileSdkVersion 28
 
@@ -35,4 +52,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     android.defaultConfig.vectorDrawables.useSupportLibrary = true
     implementation files('libs/exp4j-0.4.8.jar')
+    implementation files('libs/UnitOf.jar')
 }

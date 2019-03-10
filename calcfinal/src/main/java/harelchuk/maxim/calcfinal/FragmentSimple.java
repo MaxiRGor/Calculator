@@ -223,17 +223,22 @@ public class FragmentSimple extends Fragment{
             historyString+=inputString;
             historyTextView.setText(historyString + "=");
 
-            if ((result % 1) == 0) {
-                int temp = (int) result;
-                inputString = String.valueOf(temp);
-                historyString+=" = " + inputString;
-            } else {
-                result = Math.round(result * 100000000.0) / 100000000.0;
-                inputString = String.valueOf(result);
-                historyString+=" = " + inputString;
-                pointPressedBool=true;
+            if(result>2147483647){
+                Toast.makeText(getContext(), "Too large answer", Toast.LENGTH_LONG).show();
             }
-            inputTextView.setText(inputString);
+            else{
+                if ((result % 1) == 0) {
+                    int temp = (int) result;
+                    inputString = String.valueOf(temp);
+                    historyString+=" = " + inputString;
+                } else {
+                    result = Math.round(result * 100000000.0) / 100000000.0;
+                    inputString = String.valueOf(result);
+                    historyString+=" = " + inputString;
+                    pointPressedBool=true;
+                }
+                inputTextView.setText(inputString);
+            }
         }
         catch (Exception e){
             Toast.makeText(getContext(), "Solve error", Toast.LENGTH_LONG).show();
